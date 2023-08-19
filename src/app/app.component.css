@@ -5,10 +5,9 @@
 
 /* ================ Header section ================ */
 .header {
-    height: 15vh;
+    height: 10vh;
     width: 100%;
-    border: 1px solid purple;
-    background-color: #FE6103;
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,9 +24,9 @@
 .body-parent-module {
     min-height: 90vh;
     width: 100%;
-    border: 2px solid rgb(176, 229, 19);
+    /* border: 2px solid rgb(176, 229, 19); */
     position: relative;
-    top: 15vh;
+    top: 10vh;
     overflow: auto;
 }
 
