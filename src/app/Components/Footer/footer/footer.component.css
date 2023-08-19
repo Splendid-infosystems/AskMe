@@ -1,8 +1,9 @@
 .footer-main{
-    min-height: 18vh;
+    min-height: 14vh;
     display: flex;
     justify-content: center;
-    
+    border-top: 1.5px solid #f6f6f6;
+    padding-top: 20px;
 }
 /* === Quick link ==== */
 .quick-links{
@@ -57,6 +58,10 @@
 .v-link a{
     text-decoration: none;
     color: #777777;
+}
+.v-link a:hover{
+    text-decoration: underline;
+    color: #555454;
 }
 /* === Copyright === */
 .copyright{
