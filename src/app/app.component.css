@@ -18,6 +18,7 @@
 /* ================ main Section ============== */
 .main-div {
     overflow: auto;
+    
 }
 
 /* ================ body-parent-module ============== */
@@ -28,13 +29,17 @@
     position: relative;
     top: 10vh;
     overflow: auto;
+    width: 95%;
+    margin: auto;
 }
 
 /* ================ Footer Section ============== */
 .footer {
     min-height: 25vh;
     width: 100%;
-    border: 2px solid rgb(93, 7, 232);
+    margin: auto;
     position: relative;
     top: 15vh;
+    width: 95%;
+    margin: auto;
 }
