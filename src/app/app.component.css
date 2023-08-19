@@ -1,19 +1,22 @@
-
 /* ================ Header section ================ */
 .header {
-     min-height: 10vh; 
-     width: 100%; 
-     position: -webkit-sticky;
+    min-height: 10vh;
+    width: 100%;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 
 /* ================ body-parent-module ============== */
 .body-parent-module {
-    min-height:60vh;
+    min-height: 60vh;
     width: 100%;
     width: 95%;
     margin: auto;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 100px;
+    }
 }
 
 /* ================ Footer Section ============== */
@@ -22,4 +25,8 @@
     width: 100%;
     width: 95%;
     margin: auto;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
