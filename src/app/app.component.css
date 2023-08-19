@@ -1,0 +1,41 @@
+/* ================ Hero Section ============== */
+.hero-div {
+    overflow: hidden;
+}
+
+/* ================ Header section ================ */
+.header {
+    height: 15vh;
+    width: 100%;
+    border: 1px solid purple;
+    background-color: #FE6103;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ================ main Section ============== */
+.main-div {
+    overflow: auto;
+}
+
+/* ================ body-parent-module ============== */
+.body-parent-module {
+    min-height: 90vh;
+    width: 100%;
+    border: 2px solid rgb(176, 229, 19);
+    position: relative;
+    top: 15vh;
+    overflow: auto;
+}
+
+/* ================ Footer Section ============== */
+.footer {
+    min-height: 25vh;
+    width: 100%;
+    border: 2px solid rgb(93, 7, 232);
+    position: relative;
+    top: 15vh;
+}
