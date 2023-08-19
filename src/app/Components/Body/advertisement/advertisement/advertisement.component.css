@@ -27,6 +27,7 @@
 @media screen and (max-width: 767px) {
     .advertisement{
         flex-direction: column;
+        min-height: 30vh;
     }
     .advertisement-left{
         margin-top: 20px;
@@ -34,8 +35,7 @@
         height: 25vh;
     }
     .search-box{
-        width:100%;
-        min-height: 30vh;
+        display: none;
     }
     .advertisement-right{
     display: none;
