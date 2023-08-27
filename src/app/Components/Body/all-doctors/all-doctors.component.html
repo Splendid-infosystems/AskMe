@@ -1,1 +1,14 @@
-<p>all-doctors works!</p>
+<div class="card-container">
+    <div class="card" *ngFor="let category of categories">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="card-label">{{ category.label }}</span>
+      </div>
+      <ul class="category-items">
+        <li *ngFor="let item of category.items">
+          <a href="#"><i class="{{ item.icon }} custom-icon"></i></a>
+          <div>{{ item.name }}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

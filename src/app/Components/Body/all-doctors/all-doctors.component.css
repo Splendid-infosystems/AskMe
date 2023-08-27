@@ -1,0 +1,63 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0px 20px 20px 20px;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    width: 300px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .category-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+  }
+  
+  .category-items li {
+    /* width: calc(25% - 20px); 25% for 4 items per line with a gap of 20px */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-items li.new-line {
+    width: 100%; /* Full width for the item on a new line */
+  }
+  
+  .category-items li i {
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    color: #ec6a2f;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      min-width: 100%;
+    }
+  }
+  
