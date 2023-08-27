@@ -8,6 +8,8 @@ import { BodyParentModuleComponent } from './Components/body/body-parent-module/
 import { FooterComponent } from './Components/Footer/footer/footer.component';
 import { AdvertisementComponent } from './Components/Body/advertisement/advertisement/advertisement.component';
 import { CategoryListComponent } from './Components/Body/category/category-list/category-list.component';
+import { DoctorDescriptionComponent } from './Components/Body/doctor-description/doctor-description.component';
+import { AllDoctorsComponent } from './Components/Body/all-doctors/all-doctors.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CategoryListComponent } from './Components/Body/category/category-list/
     FooterComponent,
     BodyParentModuleComponent,
     AdvertisementComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    DoctorDescriptionComponent,
+    AllDoctorsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-body-parent-module',
@@ -11,11 +12,16 @@ export class BodyParentModuleComponent {
   currentName = this.names[this.currentNameIndex];
 
 
-  constructor() { }
+  // constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    this.startNameChangeInterval();
-  }
+  // ngOnInit() {
+  //   this.route.url.subscribe(urlSegments => {
+  //     if (urlSegments[0]?.path === 'AllDoctors') {
+  //       this.router.navigate(['/dashboard']);
+  //     }
+  //   });
+  // }
+  
 
   startNameChangeInterval() {
     setInterval(() => {
