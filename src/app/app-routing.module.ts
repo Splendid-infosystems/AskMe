@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllDoctorsComponent } from './Components/Body/all-doctors/all-doctors.component';
+import { BodyParentModuleComponent } from './Components/body/body-parent-module/body-parent-module.component';
+
 const routes: Routes = [
   {
     path:'AllDoctors', component: AllDoctorsComponent
+  },
+  {
+    path:'home', component: BodyParentModuleComponent
   }
 ];
 
