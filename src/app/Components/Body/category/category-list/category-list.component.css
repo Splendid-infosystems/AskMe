@@ -1,49 +1,62 @@
-.category{
-    width: 100%;
-    min-height: 40vh;
-    margin: 30px 0px;
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0px 20px 20px 20px;
 }
-.cat-row{
-    
-    display: inline-grid;
-    row-gap: 18px;
-    column-gap: 15%;
-    grid-template-columns: repeat(9, 15.2%);
-}
-.item{
-    width: 100%;
-    margin-top: 20px;
-    height: 13vh;
-    text-align: center;
-    margin: auto;
-}
-.icon{
-    height: 8vh;
-    width: 100%;
-    background-color: transparent;
-    border-radius: 7px;
-    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-    display: flex;
-    color: #EC6a2f;
-    align-items: center;
-    justify-content: center;
-}
-.icon i{
-    font-size: 2.0rem;
-}
-.item a{
-    color: #111111;
-    font-size: 0.9rem;
-    padding-top: 5px;
-    text-decoration: none;
-    text-align: center;
-}
-.item a:hover{
-    color: #EC6a2f;
-}
-@media screen and (max-width: 767px) {
 
-    .cat-row{
-        grid-template-columns: auto auto auto ;   
-    } 
+.card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  width: 300px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.category-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.category-items li {
+  width: calc(25% - 20px); /* 25% for 4 items per line with a gap of 20px */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-items li.new-line {
+  width: 100%; /* Full width for the item on a new line */
+}
+
+.category-items li i {
+  padding: 10px 0px;
+  font-size: 1.5rem;
+  color: #ec6a2f;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 100%;
+  }
 }
