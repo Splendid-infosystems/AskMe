@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-body-parent-module',
@@ -11,17 +11,16 @@ export class BodyParentModuleComponent {
   currentNameIndex = 0;
   currentName = this.names[this.currentNameIndex];
 
+  isAllDoctorsActive: boolean = false;
+  constructor(private router: Router) {}
 
-  // constructor(private router: Router, private route: ActivatedRoute) {}
-
-  // ngOnInit() {
-  //   this.route.url.subscribe(urlSegments => {
-  //     if (urlSegments[0]?.path === 'AllDoctors') {
-  //       this.router.navigate(['/dashboard']);
-  //     }
-  //   });
-  // }
-  
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isAllDoctorsActive = this.router.isActive('/AllDoctors', true);
+      }
+    });
+  }
 
   startNameChangeInterval() {
     setInterval(() => {
