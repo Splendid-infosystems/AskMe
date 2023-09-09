@@ -1,12 +1,17 @@
-<div class="card-container">
-    <div class="card" *ngFor="let category of categories">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
+<div  class="card-container">
+    <div  class="card" *ngFor="let category of categories">
+      <div class="card-header">
         <span class="card-label">{{ category.label }}</span>
       </div>
       <ul class="category-items">
         <li *ngFor="let item of category.items">
-          <a href="#"><i class="{{ item.icon }} custom-icon"></i></a>
-          <div>{{ item.name }}</div>
+          <!-- <a [routerLink]="['/AllDoctors/doctordescription', item.name]"> -->
+            <i class="{{ item.icon }} custom-icon" (click)="toggleItemsVisibility(item)"></i>
+          <!-- </a> -->
+          <div class="item-name">{{ item.name }}</div>
+          <div *ngIf="item.showContentForId0 && item.id === '0'">
+            Shubham
+          </div>
         </li>
       </ul>
     </div>

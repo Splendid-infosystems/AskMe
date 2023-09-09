@@ -9,23 +9,29 @@ export class AllDoctorsComponent {
   categories = [
     {
       label: 'A',
-      showAll: false,
       items: [
-        { icon: 'fas fa-allergies', name: 'Allergist' },
-        { icon: 'fa-solid fa-mask-face', name: 'Anesthesiologist' },
-        { icon: 'fa fa-deaf', name: 'Audiologist' },
+        { icon: 'fas fa-allergies', name: 'Allergist', id: '0', showContentForId0: false },
+        { icon: 'fa-solid fa-mask-face', name: 'Anesthesiologist', id: '1', showContentForId0: false },
+        { icon: 'fa fa-deaf', name: 'Audiologist', id: '2', showContentForId0: false },
       ]
     },
     {
       label: 'B',
-      showAll: false,
       items: [
-        { icon: 'fa-solid fa-syringe', name: 'Bariatric' },
+        { icon: 'fa-solid fa-syringe', name: 'Bariatric Shubham', id: '3', showContentForId0: false },
       ]
     },
   ];
 
-  toggleItemsVisibility(category: any) {
-    category.showAll = !category.showAll;
+  toggleItemsVisibility(item: any) {
+    this.categories.forEach(category => {
+      category.items.forEach(categoryItem => {
+        if (categoryItem.id !== '0') {
+          categoryItem.showContentForId0 = false;
+        }
+      });
+    });
+
+    item.showContentForId0 = !item.showContentForId0;
   }
 }

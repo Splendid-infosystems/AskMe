@@ -9,7 +9,7 @@
   .card {
     background-color: #f9f9f9;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     flex: 1;
     width: 300px;
@@ -54,10 +54,29 @@
     font-size: 1.5rem;
     color: #ec6a2f;
   }
+  .category-items li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  /* .custom-icon {
+    margin-right: 10px;
+  } */
+  
+  .item-name {
+    flex: 1;
+    word-wrap: break-word; /* Allow the text to wrap */
+  }
   
   @media (max-width: 768px) {
     .card {
       min-width: 100%;
     }
+  }
+  
+  .item-name {
+    flex: 1;
+    word-wrap: break-word; /* Allow the text to wrap */
   }
   

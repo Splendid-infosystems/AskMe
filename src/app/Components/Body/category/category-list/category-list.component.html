@@ -1,22 +1,52 @@
-<div class="card-container">
-    <div class="card" *ngFor="let category of categories">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <span class="card-label">{{ category.label }}</span>
-        <div style="display: flex; align-items: center;">
-          <!-- <a [routerLink]="['/AllDoctors']" style="color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-            <span (click)="toggleItemsVisibility(category)">
-              {{ category.showAll ? 'Hide All' : 'See All' }} <i class="fa-solid fa-chevron-right"></i>
-            </span>
-          </a> -->
-          <a routerLink="AllDoctors">See all</a>
-        </div>
+<!-- <div class="card-container">
+  <div class="card" *ngFor="let category of categories">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="card-label">{{ category.label }}</span>
+      <div style="display: flex; align-items: center;">
+        <a style="color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; text-decoration: none;"
+         routerLink="AllDoctors">See all <i
+            class="fa-solid fa-chevron-right"></i></a>
       </div>
-      <ul class="category-items">
-        <li *ngFor="let item of category.items | slice: 0 : (category.showAll ? category.items.length : 4)">
-          <a href="#"><i class="{{ item.icon }} custom-icon"></i></a>
-          <div>{{ item.name }}</div>
-        </li>
-      </ul>
     </div>
+    <ul class="category-items">
+      <li *ngFor="let item of category.items | slice: 0 : (category.showAll ? category.items.length : 4)">
+        <a routerLink="['/AllDoctors',  item.id]">
+          <i class="{{ item.icon }} custom-icon"></i>
+          <div>{{ item.name }}</div>
+        </a>
+      </li>
+    </ul>
   </div>
-  
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- Category cards -->
+<div class="card-container">
+  <div class="card" *ngFor="let category of categories">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="card-label">{{ category.label }}</span>
+      <div style="display: flex; align-items: center;">
+        <!-- Link to 'AllDoctors' page -->
+        <a style="color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; text-decoration: none;"
+           [routerLink]="['/AllDoctors']">See all <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    </div>
+    <ul class="category-items">
+      <!-- Item links with dynamic routing -->
+      <li *ngFor="let item of category.items | slice: 0 : (category.showAll ? category.items.length : 4)">
+        <a [routerLink]="['/AllDoctors', item.id]">
+          <i class="{{ item.icon }} custom-icon"></i>
+          <div>{{ item.name }}</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
