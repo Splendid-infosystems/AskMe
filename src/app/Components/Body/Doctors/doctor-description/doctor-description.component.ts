@@ -8,11 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DoctorDescriptionComponent implements OnInit {
   doctorName: string | undefined;
-
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log("Doctor is is",this.route.snapshot.paramMap.get('id'))
+    console.log("Doctor is",this.route.snapshot.paramMap.get('id'))
     // this.route.paramMap.subscribe((params)=>{
     //   const doctorId =params.get('id');
     //   alert(params)

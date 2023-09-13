@@ -7,9 +7,9 @@ import { DoctorDescriptionComponent } from './Components/Body/Doctors/doctor-des
 const routes: Routes = [
   // Other routes...
   { path: 'home', component: BodyParentModuleComponent },
+  { path: '', component: BodyParentModuleComponent },
   { path: 'AllDoctors', component: AllDoctorsComponent },
-  { path: 'desc', component: AllDoctorsComponent },
-  // { path: 'AllDoctors/:id', component: DoctorDescriptionComponent }
+  { path: 'AllDoctors/:id', component: DoctorDescriptionComponent }
 ];
 
 

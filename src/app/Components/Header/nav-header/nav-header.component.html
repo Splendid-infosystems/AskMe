@@ -1,36 +1,42 @@
-<div *ngIf="isHomeActive">
-    <nav class="navbar">
-        <div class="d-brand">
-            <a routerLink="home"><i class="fa-solid fa-backward"></i></a>
-            <p>Doctors</p>
-        </div>  
-    </nav>
-    <div class="mobile-nav-logo">
-        <ul>
-            <li>
-                <a href="#"><i class="fa-solid fa-house custom-icon"></i></a>
-                <div>Home</div>
-            </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-b custom-icon"></i></a>
-                <div>B2B</div>
-            </li>
-            <li>
-                <div style="color:#ec6a2f; font-size: 20px; font-weight: bold;">AskMe</div>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-newspaper custom-icon"></i></a>
-                <div>News</div>
-            </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-bars custom-icon"></i></a>
-                <div>More</div>
-            </li>
-        </ul>
-    </div>
-</div>
-  <div *ngIf="!isHomeActive">
-    <nav class="navbar">
+
+    <div>
+        <div [ngSwitch]="currentUrl">
+            <div *ngSwitchCase="'/AllDoctors'">
+              <nav class="navbar">
+                <div class="d-brand">
+                    <a routerLink="home"><i class="fa-solid fa-backward"></i></a>
+                    <p>Doctors</p>
+                </div> 
+                 
+              </nav>
+            </div>
+            <div *ngSwitchCase="'case2'">
+                
+            </div>
+            <div *ngSwitchCase="'case3'">Content for case 3</div>
+            <div *ngSwitchDefault>
+                <nav class="navbar">
+                    <div class="brand">
+                        <a href="#">AskMe</a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#">Home</a>
+                        <a href="#">Cities</a>
+                        <a href="#">Categories</a>
+                        <button class="login-signup-btn">Login/Sign Up</button>
+                    </div>
+                    <div class="mobile-nav">
+                        <div class="mobile-logo">
+                            <span style="margin-right: 15px; font-size: 15px;">
+                                <a href="#"><i class="fa-regular fa-bell fa-2x fa-fw custom-icon"></i></a>
+                            </span>
+                            <a href="#"><i class="fa-solid fa-circle-user fa-2x fa-fw custom-icon"></i></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+          </div>	
+    <!-- <nav class="navbar">
         <div class="brand">
             <a href="#">AskMe</a>
         </div>
@@ -48,7 +54,7 @@
                 <a href="#"><i class="fa-solid fa-circle-user fa-2x fa-fw custom-icon"></i></a>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <div class="mobile-nav-logo">
         <ul>
             <li>

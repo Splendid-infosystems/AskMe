@@ -10,16 +10,16 @@ export class BodyParentModuleComponent {
   names: string[] = ['Restaurants', 'Hotels', 'Beauty Spa', 'Home Decor']; // Add more names as needed
   currentNameIndex = 0;
   currentName = this.names[this.currentNameIndex];
-
-  isAllDoctorsActive: boolean = false;
-  constructor(private router: Router) {}
-
+  
+  // isAllDoctorsActive: boolean = true;
+  // constructor(private router: Router) {}
+  variableToSwitch: string = 'case1'; 
   ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.isAllDoctorsActive = this.router.isActive('/AllDoctors', true);
-      }
-    });
+    // this.router.events.subscribe(event => {
+    //   if (event instanceof NavigationEnd) {
+    //     this.isAllDoctorsActive = this.router.isActive('/AllDoctors', true);
+    //   }
+    // });
   }
 
   startNameChangeInterval() {
