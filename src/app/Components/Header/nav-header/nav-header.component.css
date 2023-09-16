@@ -6,7 +6,7 @@
     padding: 18px 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    
 }
 
 .brand a {
@@ -62,6 +62,7 @@
 }
 .mobile-nav-logo{
     display: none;
+   
 }
 /* =============Doctor brand  ============ */
 .d-brand{
@@ -70,8 +71,6 @@
     align-items: center;
     width: 90vw;
     margin: auto;
-
-
 }
 .d-brand a{
     width: 10vw;
@@ -113,6 +112,7 @@
     }
     .mobile-nav-logo{
         display: block;
+        z-index: 1;
     }
 
     .mobile-nav-logo ul {
