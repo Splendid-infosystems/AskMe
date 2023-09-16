@@ -1,8 +1,43 @@
 .doctor-desc{
-    height: 80vh;
+    height: auto;
     width: 100%;
-    color: purple;
+    margin: auto;
+  
+    
+}
+.doctor-item{
+    background-image: url(../../../../../assets/Dr_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding-bottom: 10px;
+    position: relative;
+    
+}
+.doctor-item:not(:first-child){
+    margin-top:14px ;
+}
+.dr-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 70px;
+    
+}
+img{
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 7px 7px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;   
+}
+.doctor-details{
+    padding: 0px 12px;
+}
+.dr-name{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.hsp-name{
+    position: absolute;
+    top: 10px;
 }

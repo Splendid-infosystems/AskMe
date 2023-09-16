@@ -1,3 +1,23 @@
+
 <div class="doctor-desc">
-    <p>doctor Description</p>
+    <div *ngFor="let category of doctorDescription; let i = index" >
+        <div *ngFor="let docItem of category.doc; let j = index" class="doctor-item">
+            <div class="dr-img">
+                <img src="../../../../../assets/profetional.avif" alt="">
+            </div>
+            <div class="doctor-details">
+                    <p class="dr-name">Name: {{ docItem.doctor_name }}</p>
+                    <p class="hsp-name">Hospital: {{ docItem.hospital_name }}</p>
+                    <p class="dr-address">Address: {{ docItem.address }}</p>
+                    <p class="dr-review">review: {{ docItem.reviews }}</p>
+                    <p class="h-name">address: {{ docItem.address }}</p>
+                    <p class="h-name">contact: {{ docItem.contact1 }}</p>
+                    <p class="h-name">contact: {{ docItem.contact2 }}</p>
+                    <p class="h-name">enquiry: {{ docItem.enquiry }}</p>
+                    <p class="h-name">Timing: {{ docItem.timing }}</p>
+                    <p class="h-name">Closed on: {{ docItem.closed_day }}</p>
+                    </div>
+                <!-- Add more details here if needed -->
+            </div>
+        </div>
 </div>
